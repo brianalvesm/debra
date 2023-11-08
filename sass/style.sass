@@ -1,0 +1,146 @@
+// Stylesheets
+
+@import "base"
+@import "components"
+
+// Home - Sections
+.sec-hero
+	background-color: $color-secondary
+	background-image: url('../images/hero-bg.png')
+	background-size: cover
+	background-position: center
+	.hero-wrap
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-direction: column
+		gap: 70px
+		height: 960px
+		color: white		
+	.headline
+		font-family: $font-titles
+		font-size: 70px
+		font-weight: 700
+		text-align: center
+		line-height: 1.2
+		margin-bottom: 0
+	@media only screen and (max-width: 60rem)
+		.hero-wrap
+			height: 560px
+		.headline
+			font-size: 35px
+
+.sec-about
+	padding: 150px 0
+	.flex
+		display: flex
+		flex-direction: column
+		gap: 200px
+	.sec-wrap
+		display: flex
+		align-items: center
+		flex-direction: row
+		gap: 100px
+		img
+			width: 450px
+		&:nth-child(2)
+			flex-direction: row-reverse
+	@media only screen and (max-width: 60rem)
+		padding: 100px 0
+		.flex
+			gap: 50px
+		.sec-wrap
+			flex-direction: column
+			gap: 50px
+			img
+				width: 90%
+				max-width: fit-content
+				// margin: auto
+			&:nth-child(2)
+				flex-direction: column
+
+.sec-business
+	background-color: #F9F9F9
+	padding: 100px 0
+	.model-cont
+		display: none
+		&.active
+			display: block
+		.business-wrap
+			display: flex
+			gap: 100px
+			align-items: center
+			justify-content: center
+			margin-bottom: 100px
+		img
+			max-width: 332px
+			max-height: 150px
+			height: fit-content
+	.sec-content
+		max-width: 630px
+	@media only screen and (max-width: 40rem)
+		.model-cont
+			.business-wrap
+				flex-direction: column
+				gap: 50px
+
+.sec-whoweare
+	padding: 150px 0
+	.flex
+		display: flex
+		gap: 100px
+		justify-content: center
+	.sec-content
+		max-width: 630px
+		.sec-subhead
+			margin-bottom: 30px
+	@media only screen and (max-width: 60rem)
+		padding: 100px 0
+		.flex
+			flex-direction: column
+			gap: 50px
+		img
+			width: 90%
+			max-width: fit-content
+			// margin: auto
+
+.sec-contact
+	padding: 150px 0
+	.sec-headline
+		text-align: center
+		font-size: 28px
+		margin-bottom: 50px
+	.sec-content
+		max-width: 830px
+		margin: 0 auto
+	@media only screen and (max-width: 60rem)
+		padding: 0 0 100px
+
+// Assinaturas de e-mail
+.sec-email
+	padding: 100px 0 200px
+	.paragraph
+		margin: 20px 0
+	.btn
+		font-size: 16px
+		height: 45px
+		width: 150px
+
+	// Foundation
+	table
+		border-collapse: initial
+		width: initial
+		margin-bottom: initial
+		border-radius: 0
+	tbody, tfoot, thead
+		border: none
+		background-color: initial
+
+	tbody tr:nth-child(even)
+		border-bottom: initial
+		background-color: initial
+	tbody td, tbody th
+		padding: initial
+
+.email-signature-fields
+	margin: 40px 0 80px
