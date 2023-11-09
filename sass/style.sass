@@ -6,24 +6,32 @@
 // Home - Sections
 .sec-hero
 	background-color: $color-secondary
-	background-image: url('../images/hero-bg.png')
+	background-image: url('../images/home-hero-bg-full.jpg')
 	background-size: cover
 	background-position: center
 	.hero-wrap
 		display: flex
-		align-items: center
+		align-items: flex-start
 		justify-content: center
 		flex-direction: column
-		gap: 70px
-		height: 960px
+		gap: 10px
+		height: 930px
 		color: white		
-	.headline
+	.headline,
+	.sec-subhead
 		font-family: $font-titles
-		font-size: 70px
-		font-weight: 700
-		text-align: center
+		text-align: left
 		line-height: 1.2
 		margin-bottom: 0
+		color: white
+	.headline
+		font-size: 52px
+		font-weight: 700
+	.sec-subhead
+		font-size: 24px
+		font-weight: 400
+	.btn
+		margin-top: 50px
 	@media only screen and (max-width: 60rem)
 		.hero-wrap
 			height: 560px
@@ -41,8 +49,6 @@
 		align-items: center
 		flex-direction: row
 		gap: 100px
-		img
-			width: 450px
 		&:nth-child(2)
 			flex-direction: row-reverse
 	@media only screen and (max-width: 60rem)

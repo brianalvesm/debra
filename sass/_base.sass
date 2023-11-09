@@ -1,13 +1,25 @@
 // Variables
 $color-primary: #252525
 $color-secondary: #00B4DB
-$gradient1: #0083B0
-$gradient2: #00B4DB
-$font-titles: 'Source Sans Pro', sans-serif
-$font-text: 'Lora', serif
 
-// Fonts
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Source+Sans+Pro:wght@400;700&display=swap')
+// Variables
+$soft-blue: #DFE6F3
+$light-blue: #59ABF3
+$default-blue: #2B60FF
+$dark-blue: #172734
+
+$soft-purple: #DCE2F9
+$soft-white: #F4F6FB
+
+$light-gray: #D2D3D5
+$default-gray: #555555
+$dark-gray: #222
+
+$gradient1: #02BDFF
+$gradient2: #2B60FF
+
+$font-titles: 'Raleway', sans-serif
+$font-text: 'Open Sans', sans-serif
 
 // Mixins
 @mixin transition($time)
@@ -20,6 +32,90 @@ $font-text: 'Lora', serif
 @mixin gradient
   background: rgb(0,131,176)
   background: linear-gradient(0deg, $gradient1 0%, $gradient2 100%)
+
+
+// $list1: $gradient1, $gradient2
+
+// Mixins
+// @mixin gradient($direction, $list)
+  // background: -webkit-linear-gradient($direction, $list)
+  // background: -moz-linear-gradient($direction, $list)
+  // background: -o-linear-gradient($direction, $list)
+  // background: linear-gradient($direction, $list)  
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700;800&display=swap')
+
+// Components
+.btn
+  display: flex
+  align-items: center
+  justify-content: center
+  font-family: $font-titles
+  font-weight: 700
+  font-size: 18px
+  color: white
+  text-transform: uppercase
+  height: 60px
+  width: 230px
+  border-radius: 60px
+  @include gradient
+  @include transition(500ms)
+  &--primary
+    &:hover
+      color: inherit
+  &--secondary
+    @include gradient
+    border: none
+    box-shadow: none
+
+.sec-title
+  display: block
+  width: 320px
+  font-family: $font-titles
+  font-weight: 400
+  font-size: 18px
+  color: $color-primary
+  padding-bottom: 10px
+  border-bottom: 1px solid #d9d9d9
+
+.headline1
+  font-family: $font-titles
+  font-size: 48px
+  font-weight: 800
+  color: $dark-gray
+  line-height: 1.4
+  margin-bottom: 0
+  @media only screen and (max-width: 40rem)
+    font-size: 36px
+
+.headline2
+  font-family: $font-titles
+  font-size: 34px
+  font-weight: 800
+  color: $dark-gray
+  line-height: 1.1
+  margin-bottom: 0
+  @media only screen and (max-width: 40rem)
+    font-size: 22px
+
+.paragraph
+  font-family: $font-text
+  font-size: 19px
+  line-height: 1.5
+  color: $dark-gray
+  margin-bottom: 0
+  @media only screen and (max-width: 40rem)
+    font-size: 16px
+
+.content-wrap
+  display: flex
+  gap: 20px
+  flex-direction: column
+  max-width: 645px
+
+
+// -- LEGACY CODE --- //
 
 a, a:active, a:visited
   color: inherit
@@ -48,7 +144,7 @@ header.menu-mobile-active
   display: flex
   align-items: center
   justify-content: space-between
-  padding: 20px 0
+  padding: 30px 0
   font-family: $font-titles
   font-weight: 700
   font-size: 18px
@@ -62,7 +158,7 @@ header.menu-mobile-active
       &:hover
         color: $color-secondary
   .logo
-    width: 186px
+    width: 152px
   @media only screen and (max-width: 40rem)
     width: 100%
     gap: 40px
