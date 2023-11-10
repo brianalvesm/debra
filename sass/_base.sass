@@ -1,122 +1,4 @@
-// Variables
-$color-primary: #252525
-$color-secondary: #00B4DB
-
-// Variables
-$soft-blue: #DFE6F3
-$light-blue: #59ABF3
-$default-blue: #2B60FF
-$dark-blue: #172734
-
-$soft-purple: #DCE2F9
-$soft-white: #F4F6FB
-
-$light-gray: #D2D3D5
-$default-gray: #555555
-$dark-gray: #222
-
-$gradient1: #02BDFF
-$gradient2: #2B60FF
-
-$font-titles: 'Raleway', sans-serif
-$font-text: 'Open Sans', sans-serif
-
-// Mixins
-@mixin transition($time)
-  -webkit-transition: all $time cubic-bezier(0.42, 0, 0.58, 1)
-  -moz-transition: all $time cubic-bezier(0.42, 0, 0.58, 1)
-  -ms-transition: all $time cubic-bezier(0.42, 0, 0.58, 1)
-  -o-transition: all $time cubic-bezier(0.42, 0, 0.58, 1)
-  transition: all $time cubic-bezier(0.42, 0, 0.58, 1)
-
-@mixin gradient
-  background: rgb(0,131,176)
-  background: linear-gradient(0deg, $gradient1 0%, $gradient2 100%)
-
-
-// $list1: $gradient1, $gradient2
-
-// Mixins
-// @mixin gradient($direction, $list)
-  // background: -webkit-linear-gradient($direction, $list)
-  // background: -moz-linear-gradient($direction, $list)
-  // background: -o-linear-gradient($direction, $list)
-  // background: linear-gradient($direction, $list)  
-
-// Fonts
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700;800&display=swap')
-
-// Components
-.btn
-  display: flex
-  align-items: center
-  justify-content: center
-  font-family: $font-titles
-  font-weight: 700
-  font-size: 18px
-  color: white
-  text-transform: uppercase
-  height: 60px
-  width: 230px
-  border-radius: 60px
-  @include gradient
-  @include transition(500ms)
-  &--primary
-    &:hover
-      color: inherit
-  &--secondary
-    @include gradient
-    border: none
-    box-shadow: none
-
-.sec-title
-  display: block
-  width: 320px
-  font-family: $font-titles
-  font-weight: 400
-  font-size: 18px
-  color: $color-primary
-  padding-bottom: 10px
-  border-bottom: 1px solid #d9d9d9
-
-.headline1
-  font-family: $font-titles
-  font-size: 48px
-  font-weight: 800
-  color: $dark-gray
-  line-height: 1.4
-  margin-bottom: 0
-  @media only screen and (max-width: 40rem)
-    font-size: 36px
-
-.headline2
-  font-family: $font-titles
-  font-size: 34px
-  font-weight: 800
-  color: $dark-gray
-  line-height: 1.1
-  margin-bottom: 0
-  @media only screen and (max-width: 40rem)
-    font-size: 22px
-
-.paragraph
-  font-family: $font-text
-  font-size: 19px
-  line-height: 1.5
-  color: $dark-gray
-  margin-bottom: 0
-  @media only screen and (max-width: 40rem)
-    font-size: 16px
-
-.content-wrap
-  display: flex
-  gap: 20px
-  flex-direction: column
-  max-width: 645px
-
-
-// -- LEGACY CODE --- //
-
+// BASE
 a, a:active, a:visited
   color: inherit
   text-decoration: none
@@ -147,18 +29,20 @@ header.menu-mobile-active
   padding: 30px 0
   font-family: $font-titles
   font-weight: 700
-  font-size: 18px
+  font-size: 17px
   color: white
   nav
     display: flex
+    align-items: center
     gap: 50px
     a
       @include transition(500ms)
       &.active,
       &:hover
-        color: $color-secondary
-  .logo
-    width: 152px
+        color: inherit
+    .button
+      font-size: 17px
+      padding: 10px 35px
   @media only screen and (max-width: 40rem)
     width: 100%
     gap: 40px
@@ -170,36 +54,42 @@ header.menu-mobile-active
       gap: 10px
 
 footer
-  padding: 40px 0
-  background-color: $color-primary
-  color: #FFF
-  font-family: $font-titles
-  font-size: 14px
+  padding: 80px 0 30px
+  background-color: #fcfcfc
+  color: $default-gray
   .footer-wrap
     display: flex
-    gap: 200px
     flex-wrap: wrap
-    align-items: flex-end
+    align-items: center
     justify-content: center
-  .footer-content
+    padding-bottom: 40px
+    border-bottom: 1px solid $light-gray
+  .footer-half
     display: flex
+    flex-grow: 1
+    flex-direction: column
     gap: 40px
-    flex-direction: column
-  .logo
-    width: 186px
-  .contact-info-wrap
+  .footer-quarter
     display: flex
-    gap: 5px
-    flex-direction: column
-  .contact-info
-    display: flex
-    gap: 10px
-  @media only screen and (max-width: 60rem)
-    .footer-wrap
+    flex-wrap: wrap
+    flex-direction: row
+    div
+      display: flex
+      flex-grow: 1
       flex-direction: column
-      gap: 50px
-      align-items: center
-    .footer-content
-      align-items: center
-    .address
-      text-align: center
+  h6
+    margin-bottom: 15px
+  ul
+    margin: 0 
+    li
+      list-style: none
+      margin-bottom: 5px
+    img
+      margin-right: 10px
+  .copyright
+    display: block
+    text-align: center
+    margin-top: 30px
+
+.logo
+  width: 152px
