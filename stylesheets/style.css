@@ -352,6 +352,12 @@ a.link {
     .contact-banner .banner-content div {
       max-width: 390px;
       color: white; }
+    .contact-banner .banner-content .title {
+      font-size: 28px;
+      font-weight: 800; }
+    .contact-banner .banner-content .paragraph {
+      color: white;
+      margin: 20px 0 40px; }
   .contact-banner .banner-image {
     display: block;
     width: 100%;
