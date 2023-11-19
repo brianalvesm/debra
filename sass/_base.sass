@@ -30,7 +30,6 @@ header.menu-mobile-active
   font-family: $font-titles
   font-weight: 700
   font-size: 17px
-  color: white
   nav
     display: flex
     align-items: center
@@ -52,11 +51,16 @@ header.menu-mobile-active
       flex-direction: column
       flex-wrap: wrap
       gap: 10px
+  &.style--1
+    color: white
+  &.style--2
+    color: $default-gray
 
 footer
   padding: 80px 0 30px
   background-color: #fcfcfc
   color: $default-gray
+  border-top: 1px solid $soft-white
   .footer-wrap
     display: flex
     flex-wrap: wrap

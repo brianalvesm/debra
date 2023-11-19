@@ -5,6 +5,10 @@
     .flip-order-desktop {
       flex-direction: column; } }
 
+.justify-center {
+  display: flex;
+  justify-content: center; }
+
 .sec-wrap {
   display: flex;
   align-items: center;
@@ -50,8 +54,7 @@ body {
   padding: 30px 0;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 17px;
-  color: white; }
+  font-size: 17px; }
   .header nav {
     display: flex;
     align-items: center;
@@ -77,11 +80,16 @@ body {
         flex-direction: column;
         flex-wrap: wrap;
         gap: 10px; } }
+  .header.style--1 {
+    color: white; }
+  .header.style--2 {
+    color: #555555; }
 
 footer {
   padding: 80px 0 30px;
   background-color: #fcfcfc;
-  color: #555555; }
+  color: #555555;
+  border-top: 1px solid #F4F6FB; }
   footer .footer-wrap {
     display: flex;
     flex-wrap: wrap;
@@ -332,6 +340,24 @@ a.link {
       width: 100%;
       font-size: 15px; }
 
+.contact-banner {
+  border-radius: 30px;
+  display: flex;
+  overflow: hidden;
+  max-width: 1000px; }
+  .contact-banner .banner-content {
+    width: 100%;
+    padding: 100px;
+    background-image: url("../images/pattern-bg.jpg"); }
+    .contact-banner .banner-content div {
+      max-width: 390px;
+      color: white; }
+  .contact-banner .banner-image {
+    display: block;
+    width: 100%;
+    background-image: url("../images/img-3.jpg");
+    background-size: cover; }
+
 .sec-hero {
   background-size: cover;
   background-position: center;
@@ -434,3 +460,13 @@ a.link {
       width: 510px;
       background-image: url("../images/img-3.jpg");
       background-size: cover; }
+
+.sec-about {
+  padding: 100px 0; }
+  .sec-about .flex {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    gap: 40px; }
+  .sec-about .contact-banner {
+    margin-top: 60px; }
