@@ -42,7 +42,7 @@ $gradient2: #2B60FF
 .flip-order-desktop
 	flex-direction: row-reverse !important
 	@media only screen and (max-width: 40rem)
-		flex-direction: column
+		flex-direction: column !important
 
 .justify-center
 	display: flex
@@ -60,135 +60,6 @@ $gradient2: #2B60FF
 
 @import "base"
 @import "components"
-
-// COMPONENTS
-.button
-  display: flex
-  align-items: center
-  justify-content: center
-  font-family: $font-titles
-  font-weight: 700
-  font-size: 20px
-  color: white
-  width: fit-content
-  margin: 0
-  padding: 15px 70px
-  border-radius: 6px
-  @include transition(500ms)
-  &--solid
-    background-color: $default-blue
-  &--gradient
-    @include gradient
-  &--dark
-    background-color: $dark-blue
-  &--light
-    color: $default-blue
-    background-color: white
-    border: 2px solid $default-blue
-
-.solution-title
-  display: block
-  width: 450px
-  font-family: $font-titles
-  font-weight: 400
-  font-size: 18px
-  color: $dark-gray
-  padding-bottom: 10px
-  border-bottom: 1px solid $light-gray
-
-.headline1
-  font-family: $font-titles
-  font-size: 48px
-  font-weight: 800
-  color: $dark-gray
-  line-height: 1.1
-  margin-bottom: 0
-  @media only screen and (max-width: 40rem)
-    font-size: 36px
-
-.headline2
-  font-family: $font-titles
-  font-size: 34px
-  font-weight: 800
-  color: $dark-gray
-  line-height: 1.1
-  margin-bottom: 0
-  @media only screen and (max-width: 40rem)
-    font-size: 22px
-
-.headline3
-  font-family: $font-titles
-  font-size: 30px
-  font-weight: 800
-  color: $dark-gray
-  line-height: 1.1
-  margin-bottom: 0
-  @media only screen and (max-width: 40rem)
-    font-size: 20px
-
-.paragraph
-  font-family: $font-text
-  font-size: 19px
-  line-height: 1.5
-  color: $dark-gray
-  margin-bottom: 0
-  @media only screen and (max-width: 40rem)
-    font-size: 16px
-
-.content-wrap
-  display: flex
-  gap: 20px
-  flex-direction: column
-  max-width: 645px
-  .button
-  	margin-top: 20px
-
-.features-list
-	margin-top: 20px
-	gap: 20px
-	display: flex
-	flex-direction: column
-	li
-		gap: 20px
-		display: flex
-		list-style: none
-		align-items: center
-		i
-			background-color: $soft-white
-			width: 40px
-			height: 40px
-			display: flex 
-			align-items: center
-			justify-content: center
-			border-radius: 6px
-			padding: 12px
-		span
-			width: 100%
-			font-size: 15px
-
-.contact-banner
-	border-radius: 30px
-	display: flex
-	overflow: hidden
-	max-width: 1000px
-	.banner-content
-		width: 100%
-		padding: 100px
-		background-image: url('../images/pattern-bg.jpg')
-		div
-			max-width: 390px
-			color: white
-		.title
-			font-size: 28px
-			font-weight: 800
-		.paragraph
-			color: white
-			margin: 20px 0 40px
-	.banner-image
-		display: block
-		width: 100%
-		background-image: url('../images/img-3.jpg')
-		background-size: cover
 
 // HOMEPAGE
 .sec-hero
@@ -212,6 +83,15 @@ $gradient2: #2B60FF
 			font-weight: 600
 		.button
 			margin-top: 50px
+	@media only screen and (max-width: 40rem)
+		background-image: url('../images/home-hero-bg-mobile.jpg')
+		.hero-wrap
+			padding: 80px 0 0
+			text-align: center
+			justify-content: flex-start
+			.button
+				margin-top: 20px
+				display: none
 
 .sec-solutions
 	padding: 200px 0
@@ -234,6 +114,8 @@ $gradient2: #2B60FF
 				// margin: auto
 			&:nth-child(2)
 				flex-direction: column
+	@media only screen and (max-width: 40rem)
+		padding: 100px 0
 
 .sec-integrations
 	padding-bottom: 200px
@@ -243,6 +125,8 @@ $gradient2: #2B60FF
 		display: flex
 		flex-direction: column
 		gap: 150px
+	@media only screen and (max-width: 40rem)
+		padding-bottom: 100px
 
 .sec-cards
 	padding: 200px 0 150px
@@ -262,6 +146,8 @@ $gradient2: #2B60FF
 		background-color: white
 		box-shadow: 0 0 40px rgba(99, 118, 143, 0.25)
 		max-width: 550px
+	@media only screen and (max-width: 40rem)
+		padding: 100px 0
 
 .sec-contact
 	padding: 400px 0 200px
@@ -294,6 +180,18 @@ $gradient2: #2B60FF
 			width: 510px
 			background-image: url('../images/img-3.jpg')
 			background-size: cover
+	@media only screen and (max-width: 40rem)
+		padding: 100px 0
+		background-color: $dark-blue
+		background-image: unset
+		.card
+			flex-direction: column-reverse
+			.card-section
+				padding: 50px
+				width: 100%
+			.card-image
+				width: 100%
+				height: 200px
 
 // SOBRE
 .sec-about
