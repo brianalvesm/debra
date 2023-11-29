@@ -197,3 +197,86 @@ $gradient2: #2B60FF
 	@media only screen and (min-width: 60rem) and (max-width: 70rem)
 		img
 			width: 50%
+
+// COLLEGE
+.page-college
+	.sec-hero
+		background-image: url('../images/college-bg.jpg')
+		.hero-wrap
+			align-items: center
+			justify-content: flex-start
+			padding-top: 100px
+			.headline1
+				text-shadow: 1px 1px 5px rgba(0, 0, 0, 1.0)
+				padding: 30px 0
+		@media only screen and (max-width: 40rem)
+			.hero-wrap
+				padding: 100px 0
+				height: unset
+				.headline1
+					font-size: 36px
+	.sec-intro
+		padding: 100px 0 225px
+		.headline1
+			text-align: center
+			justify-content: center
+			padding-bottom: 30px
+			border-bottom: 1px solid $light-gray
+		.flex
+			display: flex
+			align-items: center
+			justify-content: center
+		.sec-wrap
+			flex-direction: column
+			text-align: center
+			max-width: 832px
+			gap: 50px
+
+	// Foundation overrides
+	.dropdown.menu>li.is-dropdown-submenu-parent>a::after
+		border-color: white transparent transparent
+
+	.sec-college-2
+		padding: 150px 0 175px
+		background-color: $soft-white
+		border-top: 1px solid $soft-purple
+		position: relative
+		.section-icon
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 250px
+			height: 250px
+			border-radius: 125px
+			background-color: $soft-white
+			position: absolute
+			left: 50%
+			top: -125px
+			margin-left: -125px
+		.flex
+			display: flex
+			justify-content: space-between
+			align-items: flex-end
+			div
+				max-width: 600px
+			.headline2
+				margin-bottom: 20px
+		@media only screen and (max-width: 40rem)
+			padding: 150px 0 50px
+			text-align: center
+			.flex
+				flex-direction: column
+				gap: 20px
+
+	.sec-college-3
+		padding: 300px 0 275px
+		background-color: $soft-white
+		background-image: url('../images/darkblue-bg.png')
+		background-size: cover
+		background-position: center top
+		.headline2,
+		.paragraph
+			color: white
+		@media only screen and (max-width: 40rem)
+			padding: 150px 0 100px
+			text-align: center

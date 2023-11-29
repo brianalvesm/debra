@@ -65,8 +65,13 @@ body
         display: flex
   &.style--1
     color: white
+    @media only screen and (max-width: 40rem)
+      .is-dropdown-submenu
+        color: white
   &.style--2
     color: $default-gray
+    .is-dropdown-submenu
+      color: $default-gray
     .menu-icon:after
       background: $dark-blue
       box-shadow: 0 7px 0 $dark-blue, 0 14px 0 $dark-blue

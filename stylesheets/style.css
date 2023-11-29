@@ -88,8 +88,13 @@ body {
         display: flex; }
   .header.style--1 {
     color: white; }
+    @media only screen and (max-width: 40rem) {
+      .header.style--1 .is-dropdown-submenu {
+        color: white; } }
   .header.style--2 {
     color: #555555; }
+    .header.style--2 .is-dropdown-submenu {
+      color: #555555; }
     .header.style--2 .menu-icon:after {
       background: #172734;
       box-shadow: 0 7px 0 #172734, 0 14px 0 #172734; }
@@ -234,6 +239,9 @@ form {
 
 .logo {
   width: 152px; }
+
+.breadcrumbs {
+  padding: 20px 0; }
 
 .solution-title {
   display: block;
@@ -495,3 +503,86 @@ form {
 @media only screen and (min-width: 60rem) and (max-width: 70rem) {
   .page-contact img {
     width: 50%; } }
+
+.page-college .sec-hero {
+  background-image: url("../images/college-bg.jpg"); }
+  .page-college .sec-hero .hero-wrap {
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 100px; }
+    .page-college .sec-hero .hero-wrap .headline1 {
+      text-shadow: 1px 1px 5px black;
+      padding: 30px 0; }
+  @media only screen and (max-width: 40rem) {
+    .page-college .sec-hero .hero-wrap {
+      padding: 100px 0;
+      height: unset; }
+      .page-college .sec-hero .hero-wrap .headline1 {
+        font-size: 36px; } }
+
+.page-college .sec-intro {
+  padding: 100px 0 225px; }
+  .page-college .sec-intro .headline1 {
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #D2D3D5; }
+  .page-college .sec-intro .flex {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .page-college .sec-intro .sec-wrap {
+    flex-direction: column;
+    text-align: center;
+    max-width: 832px;
+    gap: 50px; }
+
+.page-college .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+  border-color: white transparent transparent; }
+
+.page-college .sec-college-2 {
+  padding: 150px 0 175px;
+  background-color: #F4F6FB;
+  border-top: 1px solid #DCE2F9;
+  position: relative; }
+  .page-college .sec-college-2 .section-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
+    background-color: #F4F6FB;
+    position: absolute;
+    left: 50%;
+    top: -125px;
+    margin-left: -125px; }
+  .page-college .sec-college-2 .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; }
+    .page-college .sec-college-2 .flex div {
+      max-width: 600px; }
+    .page-college .sec-college-2 .flex .headline2 {
+      margin-bottom: 20px; }
+  @media only screen and (max-width: 40rem) {
+    .page-college .sec-college-2 {
+      padding: 150px 0 50px;
+      text-align: center; }
+      .page-college .sec-college-2 .flex {
+        flex-direction: column;
+        gap: 20px; } }
+
+.page-college .sec-college-3 {
+  padding: 300px 0 275px;
+  background-color: #F4F6FB;
+  background-image: url("../images/darkblue-bg.png");
+  background-size: cover;
+  background-position: center top; }
+  .page-college .sec-college-3 .headline2,
+  .page-college .sec-college-3 .paragraph {
+    color: white; }
+  @media only screen and (max-width: 40rem) {
+    .page-college .sec-college-3 {
+      padding: 150px 0 100px;
+      text-align: center; } }
