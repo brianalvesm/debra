@@ -1,4 +1,7 @@
 // BASE
+*
+  background-repeat: no-repeat
+
 a, a:active, a:visited
   color: inherit
   text-decoration: none
@@ -50,6 +53,7 @@ header.menu-mobile-active
       flex-direction: column
       flex-wrap: wrap
       gap: 10px
+      width: 100%
   &.style--1
     color: white
   &.style--2
@@ -96,12 +100,20 @@ footer
     text-align: center
     margin-top: 30px
   @media only screen and (max-width: 40rem)
+    font-size: 14px
     .footer-wrap
       gap: 40px
+      width: 95%
+      margin: auto
+      padding-bottom: 20px
     .footer-half:first-child
       gap: 20px
     .footer-quarter
-      gap: 40px
+      gap: 20px
+    .copyright
+      width: 95%
+      margin: auto
+      padding-top: 20px
 
 .logo
   width: 152px

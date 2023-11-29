@@ -57,6 +57,10 @@ $gradient2: #2B60FF
 	@media only screen and (max-width: 60rem)
 		flex-direction: column
 		gap: 50px
+	@media only screen and (max-width: 40rem)
+		gap: 25px
+		width: 95%
+		margin: auto
 
 @import "base"
 @import "components"
@@ -85,10 +89,12 @@ $gradient2: #2B60FF
 			margin-top: 50px
 	@media only screen and (max-width: 40rem)
 		background-image: url('../images/home-hero-bg-mobile.jpg')
+		background-position: bottom center
 		.hero-wrap
 			padding: 80px 0 0
 			text-align: center
 			justify-content: flex-start
+			height: 750px
 			.button
 				margin-top: 20px
 				display: none
@@ -109,13 +115,15 @@ $gradient2: #2B60FF
 			gap: 50px
 		.sec-wrap
 			img
-				width: 90%
+				width: 100%
 				max-width: fit-content
 				// margin: auto
 			&:nth-child(2)
 				flex-direction: column
 	@media only screen and (max-width: 40rem)
 		padding: 100px 0
+		.headline1
+			border-bottom: none
 
 .sec-integrations
 	padding-bottom: 200px
@@ -127,6 +135,13 @@ $gradient2: #2B60FF
 		gap: 150px
 	@media only screen and (max-width: 40rem)
 		padding-bottom: 100px
+		.headline2
+			margin-bottom: 30px
+			text-align: center
+		.flex
+			gap: 50px
+		img
+			width: 50%
 
 .sec-cards
 	padding: 200px 0 150px
@@ -148,6 +163,11 @@ $gradient2: #2B60FF
 		max-width: 550px
 	@media only screen and (max-width: 40rem)
 		padding: 100px 0
+		.card
+			padding: 30px
+			gap: 20px
+			img
+				width: 50%
 
 .sec-contact
 	padding: 400px 0 200px

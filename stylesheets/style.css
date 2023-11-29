@@ -19,6 +19,14 @@
     .sec-wrap {
       flex-direction: column;
       gap: 50px; } }
+  @media only screen and (max-width: 40rem) {
+    .sec-wrap {
+      gap: 25px;
+      width: 95%;
+      margin: auto; } }
+
+* {
+  background-repeat: no-repeat; }
 
 a, a:active, a:visited {
   color: inherit;
@@ -79,7 +87,8 @@ body {
       .header nav {
         flex-direction: column;
         flex-wrap: wrap;
-        gap: 10px; } }
+        gap: 10px;
+        width: 100%; } }
   .header.style--1 {
     color: white; }
   .header.style--2 {
@@ -126,12 +135,21 @@ footer {
     text-align: center;
     margin-top: 30px; }
   @media only screen and (max-width: 40rem) {
-    footer .footer-wrap {
-      gap: 40px; }
-    footer .footer-half:first-child {
-      gap: 20px; }
-    footer .footer-quarter {
-      gap: 40px; } }
+    footer {
+      font-size: 14px; }
+      footer .footer-wrap {
+        gap: 40px;
+        width: 95%;
+        margin: auto;
+        padding-bottom: 20px; }
+      footer .footer-half:first-child {
+        gap: 20px; }
+      footer .footer-quarter {
+        gap: 20px; }
+      footer .copyright {
+        width: 95%;
+        margin: auto;
+        padding-top: 20px; } }
 
 .logo {
   width: 152px; }
@@ -403,11 +421,13 @@ a.link {
       margin-top: 50px; }
   @media only screen and (max-width: 40rem) {
     .sec-hero {
-      background-image: url("../images/home-hero-bg-mobile.jpg"); }
+      background-image: url("../images/home-hero-bg-mobile.jpg");
+      background-position: bottom center; }
       .sec-hero .hero-wrap {
         padding: 80px 0 0;
         text-align: center;
-        justify-content: flex-start; }
+        justify-content: flex-start;
+        height: 750px; }
         .sec-hero .hero-wrap .button {
           margin-top: 20px;
           display: none; } }
@@ -428,13 +448,15 @@ a.link {
       .sec-solutions .flex {
         gap: 50px; }
       .sec-solutions .sec-wrap img {
-        width: 90%;
+        width: 100%;
         max-width: fit-content; }
       .sec-solutions .sec-wrap:nth-child(2) {
         flex-direction: column; } }
   @media only screen and (max-width: 40rem) {
     .sec-solutions {
-      padding: 100px 0; } }
+      padding: 100px 0; }
+      .sec-solutions .headline1 {
+        border-bottom: none; } }
 
 .sec-integrations {
   padding-bottom: 200px; }
@@ -446,7 +468,14 @@ a.link {
     gap: 150px; }
   @media only screen and (max-width: 40rem) {
     .sec-integrations {
-      padding-bottom: 100px; } }
+      padding-bottom: 100px; }
+      .sec-integrations .headline2 {
+        margin-bottom: 30px;
+        text-align: center; }
+      .sec-integrations .flex {
+        gap: 50px; }
+      .sec-integrations img {
+        width: 50%; } }
 
 .sec-cards {
   padding: 200px 0 150px;
@@ -468,7 +497,12 @@ a.link {
     max-width: 550px; }
   @media only screen and (max-width: 40rem) {
     .sec-cards {
-      padding: 100px 0; } }
+      padding: 100px 0; }
+      .sec-cards .card {
+        padding: 30px;
+        gap: 20px; }
+        .sec-cards .card img {
+          width: 50%; } }
 
 .sec-contact {
   padding: 400px 0 200px;
