@@ -179,7 +179,7 @@ $gradient2: #2B60FF
 		background-image: unset
 
 // SOBRE
-.sec-about
+.page-about
 	padding: 100px 0
 	.flex
 		display: flex
@@ -188,3 +188,12 @@ $gradient2: #2B60FF
 		gap: 40px
 	.contact-banner
 		margin-top: 60px
+
+// CONTATO
+.page-contact
+	@extend .page-about
+	.flex
+		max-width: 500px
+	@media only screen and (min-width: 60rem) and (max-width: 70rem)
+		img
+			width: 50%
