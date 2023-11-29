@@ -13,13 +13,16 @@
   border-radius: 6px
   @include transition(500ms)
   &--solid
+  	color: white !important
     background-color: $default-blue
   &--gradient
+    color: white !important
     @include gradient
   &--dark
+    color: white !important
     background-color: $dark-blue
   &--light
-    color: $default-blue
+    color: $default-blue !important
     background-color: white
     border: 2px solid $default-blue
   @media only screen and (max-width: 40rem)

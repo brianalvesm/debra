@@ -44,15 +44,6 @@ body {
     body {
       font-size: 15px; } }
 
-@media only screen and (max-width: 40rem) {
-  header.menu-mobile-active {
-    -webkit-transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1);
-    -moz-transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1);
-    -ms-transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1);
-    -o-transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1);
-    transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1);
-    background-color: rgba(0, 0, 0, 0.2); } }
-
 .header {
   position: relative;
   background-color: transparent;
@@ -63,35 +54,38 @@ body {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 17px; }
-  .header nav {
-    display: flex;
+  .header .menu {
     align-items: center;
     gap: 50px; }
-    .header nav a {
+    .header .menu .item.active, .header .menu .item:hover {
+      color: inherit; }
+    .header .menu .button {
+      font-size: 17px;
+      padding: 10px 35px;
+      color: white; }
+      .header .menu .button:hover {
+        color: white; }
+    .header .menu .is-dropdown-submenu {
+      min-width: unset;
+      border: none;
+      background: white;
+      flex-direction: column;
+      gap: 20px;
+      padding: 26px 20px;
+      border-radius: 16px;
+      background-color: white;
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+      color: #555555;
+      font-size: 14px;
       -webkit-transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1);
       -moz-transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1);
       -ms-transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1);
       -o-transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1);
       transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1); }
-      .header nav a.active, .header nav a:hover {
-        color: inherit; }
-    .header nav .button {
-      font-size: 17px;
-      padding: 10px 35px;
-      color: white; }
-      .header nav .button:hover {
-        color: white; }
-  @media only screen and (max-width: 40rem) {
-    .header {
-      width: 100%;
-      gap: 40px;
-      padding: 10px;
-      flex-wrap: wrap; }
-      .header nav {
-        flex-direction: column;
-        flex-wrap: wrap;
-        gap: 10px;
-        width: 100%; } }
+      .header .menu .is-dropdown-submenu a {
+        padding: 0; }
+      .header .menu .is-dropdown-submenu.js-dropdown-active {
+        display: flex; }
   .header.style--1 {
     color: white; }
   .header.style--2 {
@@ -99,6 +93,22 @@ body {
     .header.style--2 .menu-icon:after {
       background: #172734;
       box-shadow: 0 7px 0 #172734, 0 14px 0 #172734; }
+  @media only screen and (max-width: 40rem) {
+    .header {
+      width: 100%;
+      gap: 40px;
+      padding: 10px;
+      flex-wrap: wrap; }
+      .header .menu {
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100%; }
+        .header .menu .is-dropdown-submenu {
+          display: flex;
+          position: relative;
+          box-shadow: none;
+          background-color: unset; } }
 
 footer {
   padding: 80px 0 30px;
@@ -199,8 +209,10 @@ form {
   -o-transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1);
   transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1); }
   .button--solid {
-    background-color: #2B60FF; }
+    color: white !important;
+      color-background-color: #2B60FF; }
   .button--gradient {
+    color: white !important;
     background: #2B60FF;
     background: linear-gradient(90deg, #02BDFF 0%, #2B60FF 100%);
     background: -webkit-linear-gradient(90deg, #02BDFF 0%, #2B60FF 100%);
@@ -208,9 +220,10 @@ form {
     background: -o-linear-gradient(90deg, #02BDFF 0%, #2B60FF 100%);
     background: linear-gradient(90deg, #02BDFF 0%, #2B60FF 100%); }
   .button--dark {
+    color: white !important;
     background-color: #172734; }
   .button--light {
-    color: #2B60FF;
+    color: #2B60FF !important;
     background-color: white;
     border: 2px solid #2B60FF; }
   @media only screen and (max-width: 40rem) {

@@ -17,10 +17,10 @@ body
   @media only screen and (max-width: 40rem)
     font-size: 15px
 
-header.menu-mobile-active
-  @media only screen and (max-width: 40rem)
-    @include transition(500ms)
-    background-color: rgba(black, 0.2)
+// header.menu-mobile-active
+//   @media only screen and (max-width: 40rem)
+//     @include transition(500ms)
+//     background-color: rgba(black, 0.2)
 
 .header
   position: relative
@@ -32,12 +32,10 @@ header.menu-mobile-active
   font-family: $font-titles
   font-weight: 700
   font-size: 17px
-  nav
-    display: flex
+  .menu
     align-items: center
     gap: 50px
-    a
-      @include transition(500ms)
+    .item
       &.active,
       &:hover
         color: inherit
@@ -47,16 +45,24 @@ header.menu-mobile-active
       color: white
       &:hover
         color: white
-  @media only screen and (max-width: 40rem)
-    width: 100%
-    gap: 40px
-    padding: 10px
-    flex-wrap: wrap
-    nav
+    // Foundation overrides
+    .is-dropdown-submenu
+      min-width: unset
+      border: none
+      background: white
       flex-direction: column
-      flex-wrap: wrap
-      gap: 10px
-      width: 100%
+      gap: 20px
+      padding: 26px 20px
+      border-radius: 16px
+      background-color: white
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
+      color: $default-gray
+      font-size: 14px
+      @include transition(500ms)
+      a
+        padding: 0
+      &.js-dropdown-active
+        display: flex
   &.style--1
     color: white
   &.style--2
@@ -64,6 +70,21 @@ header.menu-mobile-active
     .menu-icon:after
       background: $dark-blue
       box-shadow: 0 7px 0 $dark-blue, 0 14px 0 $dark-blue
+  @media only screen and (max-width: 40rem)
+    width: 100%
+    gap: 40px
+    padding: 10px
+    flex-wrap: wrap
+    .menu
+      flex-direction: column
+      flex-wrap: wrap
+      gap: 10px
+      width: 100%
+      .is-dropdown-submenu
+        display: flex
+        position: relative
+        box-shadow: none
+        background-color: unset
 
 footer
   padding: 80px 0 30px
