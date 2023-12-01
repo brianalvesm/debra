@@ -48,157 +48,159 @@ $gradient2: #2B60FF
 	display: flex
 	justify-content: center
 
-.sec-wrap
-	display: flex
-	align-items: center
-	justify-content: center
-	flex-direction: row
-	gap: 100px
-	@media only screen and (max-width: 60rem)
-		flex-direction: column
-		gap: 50px
-	@media only screen and (max-width: 40rem)
-		gap: 25px
-		width: 95%
-		margin: auto
-
 @import "base"
 @import "components"
 
 // HOMEPAGE
-.sec-hero
-	background-size: cover
-	background-position: center
-	background-color: $dark-blue
-	background-image: url('../images/home-hero-bg-full.jpg')
-	.hero-wrap
-		display: flex
-		align-items: flex-start
-		justify-content: center
-		flex-direction: column
-		gap: 10px
-		height: 840px
-		.headline1
-			color: white
-			font-size: 56px
-		.headline2
-			color: white
-			font-size: 24px
-			font-weight: 600
-		.button
-			margin-top: 50px
-	@media only screen and (max-width: 40rem)
-		background-image: url('../images/home-hero-bg-mobile.jpg')
-		background-position: bottom center
+.page-home
+	.sec-hero
+		background-image: url('../images/home-hero-bg-full.jpg')
 		.hero-wrap
-			padding: 80px 0 0
-			text-align: center
-			justify-content: flex-start
-			height: 750px
+			align-items: flex-start
+			justify-content: center
+			gap: 10px
 			.headline1
-				font-size: 46px
+				font-size: 56px
+			.headline2
+				font-size: 24px
+				font-weight: 600
 			.button
-				margin-top: 20px
-				display: none
+				margin-top: 50px
+		@media only screen and (max-width: 40rem)
+			background-image: url('../images/home-hero-bg-mobile.jpg')
+			background-position: bottom center
+			.hero-wrap
+				padding: 80px 0 0
+				justify-content: flex-start
+				height: 750px
+				.headline1
+					font-size: 46px
+				.button
+					margin-top: 20px
+					display: none
 
-.sec-solutions
-	padding: 200px 0
-	.headline1
-		text-align: center
-		padding-bottom: 30px
-		border-bottom: 1px solid $light-gray
-	.flex
-		display: flex
-		flex-direction: column
-		gap: 200px
-	@media only screen and (max-width: 60rem)
-		padding: 100px 0
-		.flex
-			gap: 50px
-		.sec-wrap
-			img
-				width: 100%
-				max-width: fit-content
-				// margin: auto
-			&:nth-child(2)
-				flex-direction: column
-	@media only screen and (max-width: 40rem)
-		padding: 100px 0
+	.sec-solutions
+		padding: 200px 0
 		.headline1
-			border-bottom: none
-
-.sec-integrations
-	padding-bottom: 200px
-	.headline2
-		margin-bottom: 60px
-	.flex
-		display: flex
-		flex-direction: column
-		gap: 150px
-	@media only screen and (max-width: 40rem)
-		padding-bottom: 100px
-		.headline2
-			margin-bottom: 30px
 			text-align: center
+			padding-bottom: 30px
+			border-bottom: 1px solid $light-gray
 		.flex
-			gap: 50px
-		img
-			width: 50%
+			display: flex
+			flex-direction: column
+			gap: 200px
+		@media only screen and (max-width: 60rem)
+			padding: 100px 0
+			.flex
+				gap: 50px
+			.sec-wrap
+				img
+					width: 100%
+					max-width: fit-content
+					// margin: auto
+				&:nth-child(2)
+					flex-direction: column
+		@media only screen and (max-width: 40rem)
+			padding: 100px 0
+			.headline1
+				border-bottom: none
 
-.sec-cards
-	padding: 200px 0 150px
-	background-color: $soft-white
-	.sec-wrap
-		align-items: unset
-	.card
-		display: flex
-		flex-direction: column
-		align-items: center
-		justify-content: center
-		gap: 40px
-		padding: 60px
-		text-align: center
-		border: none
-		border-radius: 28px
-		background-color: white
-		box-shadow: 0 0 40px rgba(99, 118, 143, 0.25)
-		max-width: 550px
-	@media only screen and (max-width: 40rem)
-		padding: 100px 0
-		.card
-			padding: 30px
-			gap: 20px
+	.sec-integrations
+		padding-bottom: 200px
+		.headline2
+			margin-bottom: 60px
+		.flex
+			display: flex
+			flex-direction: column
+			gap: 150px
+		@media only screen and (max-width: 40rem)
+			padding-bottom: 100px
+			.headline2
+				margin-bottom: 30px
+				text-align: center
+			.flex
+				gap: 50px
 			img
 				width: 50%
 
-.sec-contact
-	padding: 400px 0 200px
-	background-color: $soft-white
-	background-image: url('../images/darkblue-bg.png')
-	@media only screen and (max-width: 40rem)
-		padding: 100px 0
-		background-color: $dark-blue
-		background-image: unset
+	.sec-cards
+		padding: 200px 0 150px
+		background-color: $soft-white
+		.cards-wrap
+			display: flex
+			gap: 0px
+			flex-direction: column
+			border-radius: 28px
+			background-color: white
+			background-color: $soft-white
+			box-shadow: 0 0 40px rgba(99, 118, 143, 0.25)
+			overflow: hidden
+			width: fit-content
+			margin: auto
+		.card
+			display: flex
+			align-items: center
+			justify-content: center
+			flex-direction: row
+			padding: 100px
+			gap: 100px
+			border: none
+			width: fit-content
+			// Foundation override
+			margin-bottom: 0
+			&:last-child
+				border-top: 1px solid $soft-blue
+		.card-content
+			max-width: 560px
+			display: flex
+			flex-direction: column
+			gap: 40px
+		@media only screen and (max-width: 40rem)
+			padding: 100px 0
+			.card
+				flex-direction: column
+				padding: 40px
+				gap: 40px
+			img
+				width: 50%
+			.card-content
+				text-align: center
+
+	.sec-contact
+		padding: 400px 0 200px
+		background-color: $soft-white
+		background-image: url('../images/darkblue-bg.png')
+		@media only screen and (max-width: 40rem)
+			padding: 100px 0
+			background-color: $dark-blue
+			background-image: unset
 
 // SOBRE
 .page-about
-	padding: 100px 0
-	.flex
-		display: flex
-		flex-direction: column 
-		max-width: 1000px
-		gap: 40px
-	.contact-banner
-		margin-top: 60px
+	.sec-about
+		padding: 100px 0
+		.flex
+			display: flex
+			flex-direction: column 
+			max-width: 1000px
+			gap: 40px
+		.contact-banner
+			margin-top: 60px
 
 // CONTATO
 .page-contact
-	@extend .page-about
-	.flex
-		max-width: 500px
-	@media only screen and (min-width: 60rem) and (max-width: 70rem)
-		img
-			width: 50%
+	.sec-contact
+		padding: 100px 0
+		.flex
+			display: flex
+			flex-direction: column 
+			max-width: 500px
+			gap: 40px
+		.contact-banner
+			margin-top: 60px
+		@media only screen and (min-width: 60rem) and (max-width: 70rem)
+			img
+				width: 50%
 
 // COLLEGE
 .page-college
@@ -235,10 +237,6 @@ $gradient2: #2B60FF
 			gap: 50px
 		@media only screen and (max-width: 40rem)
 			padding: 100px 0
-
-	// Foundation overrides
-	.dropdown.menu>li.is-dropdown-submenu-parent>a::after
-		border-color: white transparent transparent
 
 	.sec-college-2
 		padding: 150px 0 175px
@@ -308,7 +306,6 @@ $gradient2: #2B60FF
 		background-color: $soft-white
 		@media only screen and (max-width: 40rem)
 			padding: 0 0 20px
-
 
 // INTEGRAÇÕES
 .page-integracoes
@@ -384,6 +381,3 @@ $gradient2: #2B60FF
 			.college-banner
 				height: unset
 
-	// Foundation overrides
-	.dropdown.menu>li.is-dropdown-submenu-parent>a::after
-		border-color: white transparent transparent

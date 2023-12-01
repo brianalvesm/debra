@@ -42,6 +42,30 @@
 	// Foundation override
 	margin: 0
 
+.reveal
+	padding: 120px
+	border-radius: 28px
+	.flex
+		display: flex
+		gap: 60px
+		flex-direction: column
+	.separator
+		display: block
+		width: 100%
+		height: 1px
+		border-bottom: 1px solid $soft-blue
+	.highlight
+		background-color: $soft-white
+		border-radius: 14px
+		padding: 40px
+		text-align: center
+	@media only screen and (max-width: 40rem)
+		padding: 40px
+		.flex
+			gap: 30px
+		.highlight
+			padding: 20px
+
 .solution-title
   display: block
   width: 450px
@@ -92,6 +116,35 @@
   margin-bottom: 0
   @media only screen and (max-width: 40rem)
     font-size: 15px
+
+.sec-wrap
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-direction: row
+	gap: 100px
+	@media only screen and (max-width: 60rem)
+		flex-direction: column
+		gap: 50px
+	@media only screen and (max-width: 40rem)
+		gap: 25px
+		width: 95%
+		margin: auto
+
+.sec-hero
+	background-size: cover
+	background-position: center
+	background-color: $dark-blue
+	.hero-wrap
+		display: flex
+		height: 840px
+		flex-direction: column
+		.headline1,
+		.headline2
+			color: white
+	@media only screen and (max-width: 40rem)
+		.hero-wrap
+			text-align: center
 
 .content-wrap
   display: flex
@@ -211,3 +264,14 @@
 			width: 100%
 			height: 200px
 
+// Foundation overrides
+.dropdown.menu>li.is-dropdown-submenu-parent>a::after
+	border-color: white transparent transparent
+
+.page-about,
+.page-contact
+	.dropdown.menu>li.is-dropdown-submenu-parent>a::after
+		border-color: $default-gray transparent transparent
+
+[data-responsive-toggle=responsive-menu]
+	display: none
