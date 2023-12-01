@@ -95,6 +95,8 @@ $gradient2: #2B60FF
 			text-align: center
 			justify-content: flex-start
 			height: 750px
+			.headline1
+				font-size: 46px
 			.button
 				margin-top: 20px
 				display: none
@@ -231,6 +233,8 @@ $gradient2: #2B60FF
 			text-align: center
 			max-width: 832px
 			gap: 50px
+		@media only screen and (max-width: 40rem)
+			padding: 100px 0
 
 	// Foundation overrides
 	.dropdown.menu>li.is-dropdown-submenu-parent>a::after
@@ -262,8 +266,16 @@ $gradient2: #2B60FF
 			.headline2
 				margin-bottom: 20px
 		@media only screen and (max-width: 40rem)
-			padding: 150px 0 50px
+			padding: 100px 0 50px
 			text-align: center
+			.section-icon
+				width: 124px
+				height: 124px
+				border-radius: 62px
+				top: -62px
+				margin-left: -62px
+			img
+				width: 75%
 			.flex
 				flex-direction: column
 				gap: 20px
@@ -294,6 +306,74 @@ $gradient2: #2B60FF
 	.sec-college-5
 		padding: 0 0 70px
 		background-color: $soft-white
+		@media only screen and (max-width: 40rem)
+			padding: 0 0 20px
+
+
+// INTEGRAÇÕES
+.page-integracoes
+	.sec-hero
+		background-image: url('../images/integracao-bg.jpg')
+		.hero-wrap
+			align-items: center
+			justify-content: center
+			.headline1
+				text-align: center
+				padding-bottom: 30px
+				border-bottom: 1px solid white
+				margin-bottom: 250px
+		@media only screen and (max-width: 40rem)
+			.hero-wrap
+				padding: 100px 0
+				height: unset
+				.headline1
+					font-size: 36px
+					border-bottom: none
+					margin-bottom: 0
+	
+	.sec-intro
+		padding: 150px 0 175px
+		.flex
+			display: flex
+			justify-content: space-between
+			align-items: flex-end
+			div
+				max-width: 600px
+			.headline2
+				margin-bottom: 20px
+		@media only screen and (max-width: 40rem)
+			padding: 100px 0 50px
+			text-align: center
+			.flex
+				flex-direction: column
+				gap: 20px
+
+	.sec-college-2
+		padding: 150px 0 300px
+		background-image: url('../images/darkblue-bg-flip.png')
+		backgro
+		background-size: cover
+		background-position: center bottom
+		.headline2,
+		.paragraph
+			color: white
+		@media only screen and (max-width: 40rem)
+			padding: 50px 0 150px
+			text-align: center
+			img
+				width: 50%
+	
+	.sec-college-3
+		padding: 200px 0 275px
+		@media only screen and (max-width: 40rem)
+			padding: 50px 0 180px
+			text-align: center
+			img
+				width: 50%
+
+	.sec-college-4
+		padding: 0 0 70px
+		background-color: $soft-white
 		.college-banner
 			position: relative
 			top: -80px
@@ -304,3 +384,6 @@ $gradient2: #2B60FF
 			.college-banner
 				height: unset
 
+	// Foundation overrides
+	.dropdown.menu>li.is-dropdown-submenu-parent>a::after
+		border-color: white transparent transparent

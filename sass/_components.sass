@@ -34,9 +34,13 @@
 
 .logo
   width: 152px
+  @media only screen and (max-width: 40rem)
+  	width: 100px
 
 .breadcrumbs
 	padding: 20px 0
+	// Foundation override
+	margin: 0
 
 .solution-title
   display: block
@@ -160,14 +164,15 @@
 			width: 100%
 			height: 200px
 
-.college-banner
+.banner
+	position: relative
+	top: -80px
 	display: flex
 	flex-direction: row
 	border: none
 	border-radius: 28px
 	overflow: hidden
 	max-width: 1200px
-	height: 800px
 	box-shadow: 0 4px 50px rgba(99, 118, 143, 0.25)
 	.banner-content
 		display: flex
@@ -183,9 +188,18 @@
 			margin-bottom: 20px
 	.banner-image
 		width: 600px
-		background-image: url('../images/college-banner.jpg')
 		background-size: cover
+		background-position: center
+	&--college
+		height: 800px
+		.banner-image
+			background-image: url('../images/college-banner.jpg')
+	&--integracoes
+		height: 600px
+		.banner-image
+			background-image: url('../images/apps-bg.jpg')
 	@media only screen and (max-width: 40rem)
+		height: unset
 		flex-direction: column-reverse
 		.banner-content
 			padding: 50px
@@ -196,3 +210,4 @@
 		.banner-image
 			width: 100%
 			height: 200px
+
