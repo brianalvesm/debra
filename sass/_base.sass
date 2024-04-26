@@ -28,10 +28,12 @@ body
   display: flex
   align-items: center
   justify-content: space-between
-  padding: 30px 0
+  padding: 30px 0 0
   font-family: $font-titles
   font-weight: 700
   font-size: 17px
+  .dropdown.menu>li:nth-child(2)>a
+    padding: 0
   .menu
     align-items: center
     gap: 50px
@@ -101,9 +103,20 @@ footer
     display: flex
     flex-wrap: wrap
     align-items: center
-    justify-content: center
+    justify-content: space-between
     padding-bottom: 40px
     border-bottom: 1px solid $light-gray
+    .footer-info
+      display: flex
+      flex-wrap: wrap
+      gap: 120px
+      .margin-top
+        margin-top: 40px
+      @media only screen and (max-width: 40rem)
+        gap: 40px
+        iframe
+          width: 100%
+          height: auto
   .footer-half
     display: flex
     flex-grow: 1
